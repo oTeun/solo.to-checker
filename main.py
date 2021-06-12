@@ -1,4 +1,5 @@
 import requests
+import os
 from threading import Thread
 from colorama import Fore
 import logging
@@ -8,6 +9,7 @@ logging.basicConfig(level=logging.INFO, format="%(message)s")
 
 names = open('usernames.txt', 'r').read().splitlines()  # read names from file
 
+os.system("")
 
 def check(name):
     r = requests.get(f'https://solo.to/{name}')
@@ -15,7 +17,6 @@ def check(name):
         logging.info(f"{Fore.GREEN}[AVAILABLE] {name}")
         with open('available.txt', 'a') as f:
             f.write(name + '\n')
-            f.close()
     elif r.status_code == 200:
         logging.info(f"{Fore.RED}[UNAVAILABLE] {name}")
     else:
