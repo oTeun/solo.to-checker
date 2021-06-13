@@ -19,7 +19,7 @@ def check(name):
     elif r.status_code == 200:
         logging.info(f"{Fore.RED}[UNAVAILABLE] {name}")
     else:
-        logging.info(f"{Fore.RED}[ERROR] Received status code {r.status_code}")
+        logging.info(f"{Fore.RED}[ERROR] Received status code {r.status_code} on {name}")
 
 
 threads = []
