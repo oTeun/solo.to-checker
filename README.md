@@ -1,5 +1,6 @@
-# Solo.to name checker
+# (DEPRACATED) Solo.to name checker
 A program that checks available names on solo.to
+THIS PROGRAM NO LONGER FUNCTIONS
 
 ## READ
 - Currently, solo.to does not have any ratelimits / IP bans. I still recommend running this on a VPN. Depending on how many names you check, this program might be spamming their servers.
